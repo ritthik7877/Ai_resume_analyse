@@ -1,7 +1,7 @@
 
 import streamlit as st
-import re
-from pypdf import PdfReader
+
+from resume_analyzer import SKILLS, extract_resume_text, find_skills
 
 st.set_page_config(
     page_title="AI Resume Analyzer",
@@ -10,46 +10,6 @@ st.set_page_config(
 
 st.title("📄 AI Resume Keyword Analyzer")
 st.write("Analyze your resume based on a job description.")
-
-# Extract text from uploaded PDF
-def extract_resume_text(file):
-    reader = PdfReader(file)
-    text = ""
-
-    for page in reader.pages:
-        page_text = page.extract_text()
-        if page_text:
-            text += page_text + " "
-
-    return text.lower()
-
-
-# Available skills and keywords
-skills = [
-    "python", "java", "javascript", "html", "css",
-    "sql", "mysql", "mongodb", "react", "node.js",
-    "machine learning", "deep learning", "artificial intelligence",
-    "data analysis", "pandas", "numpy", "scikit-learn",
-    "tensorflow", "pytorch", "fastapi", "django",
-    "flask", "power bi", "excel", "git", "github",
-    "communication", "problem solving", "teamwork",
-    "leadership", "project management", "nlp",
-    "computer vision", "streamlit", "rest api"
-]
-
-
-# Find matching skills
-def find_skills(text, skill_list):
-    found = []
-
-    for skill in skill_list:
-        pattern = r"(?<!\w)" + re.escape(skill) + r"(?!\w)"
-
-        if re.search(pattern, text, re.IGNORECASE):
-            found.append(skill)
-
-    return found
-
 
 # Resume upload
 uploaded_file = st.file_uploader(
@@ -78,11 +38,11 @@ if st.button("Analyze Resume"):
             jd_text = job_description.lower()
 
             resume_skills = find_skills(
-                resume_text, skills
+                resume_text, SKILLS
             )
 
             required_skills = find_skills(
-                jd_text, skills
+                jd_text, SKILLS
             )
 
             matched_skills = [
