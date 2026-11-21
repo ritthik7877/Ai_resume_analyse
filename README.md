@@ -1,33 +1,30 @@
 
-# 📄 AI Resume Keyword Analyzer
+# AI Resume Keyword Analyzer
 
-An intelligent web-based application built using Python that analyzes resumes against job descriptions. It identifies matching skills, missing keywords, and calculates a resume match percentage to help candidates improve their resumes.
+## About the Project
 
-## 🚀 Project Overview
+AI Resume Keyword Analyzer is a simple Python-based web application that helps job seekers check how well their resume matches a job description.
 
-The AI Resume Keyword Analyzer allows users to upload their resumes in PDF format and enter a job description. The application extracts text from the resume, identifies relevant skills, compares them with the job requirements, and displays an analysis report.
+Users can upload their resume in PDF format and paste a job description. The application analyzes the content, finds matching skills, identifies missing keywords, and displays a match percentage.
 
-## ✨ Features
+## Features
 
-- 📂 Upload resumes in PDF format.
-- 📝 Enter job descriptions.
-- 🔍 Extract text from uploaded resumes.
-- ✅ Identify skills and matching keywords.
-- ❌ Detect missing skills and keywords.
-- 📊 Calculate resume match percentage.
-- 💡 Provide suggestions for resume improvement.
-- 🌐 Simple and user-friendly web interface.
+- Upload resume in PDF format.
+- Enter a job description.
+- Extract text from the resume.
+- Identify matching skills and keywords.
+- Find missing skills.
+- Display resume match percentage.
+- Provide basic suggestions for improvement.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
-| Technology | Purpose |
-|---|---|
-| Python | Application development |
-| Streamlit | Web application interface |
-| PyPDF | Extract text from PDF files |
-| Regular Expressions (Regex) | Keyword identification and matching |
+- Python
+- Streamlit
+- PyPDF
+- Regular Expressions
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 AI-Resume-Keyword-Analyzer/
@@ -37,72 +34,49 @@ AI-Resume-Keyword-Analyzer/
 └── README.md
 ```
 
-## ⚙️ Installation and Setup
+## How to Run the Project
 
-### 1. Clone the Repository
+**1. Clone the repository**
 
 ```bash
 git clone YOUR_GITHUB_REPOSITORY_URL
 ```
 
-### 2. Navigate to the Project Folder
+**2. Open the project folder**
 
 ```bash
 cd AI-Resume-Keyword-Analyzer
 ```
 
-### 3. Install Required Libraries
+**3. Install the required packages**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run the Application
+**4. Run the application**
 
 ```bash
 streamlit run app.py
 ```
 
-The application will open in your default web browser.
+## How It Works
 
-## 📊 How It Works
-
-1. Upload your resume in PDF format.
-2. Paste the job description into the text area.
+1. Upload your resume as a PDF.
+2. Paste the job description.
 3. Click the Analyze Resume button.
-4. The application extracts text from the resume.
-5. It identifies relevant skills in both the resume and job description.
-6. It compares the keywords and calculates the match percentage.
-7. It displays matching skills, missing skills, and improvement suggestions.
+4. The application checks the resume against the job requirements.
+5. View matching skills, missing keywords, and the match percentage.
 
-## 📈 Sample Output
+## Future Improvements
 
-- Resume Match Score: 75%
-- Matched Skills: Python, SQL, HTML, CSS
-- Missing Skills: Machine Learning, JavaScript
-- Suggestions: Improve your resume by including relevant skills you genuinely possess.
+- Support for Word documents.
+- More accurate keyword matching using NLP.
+- Better resume improvement suggestions.
+- Downloadable analysis reports.
 
-*Note: The above is an illustrative example.*
-
-## 🔮 Future Enhancements
-
-- Add DOCX resume support.
-- Implement NLP-based semantic matching.
-- Integrate machine learning for advanced resume analysis.
-- Generate personalized resume improvement suggestions.
-- Add job role recommendations.
-- Provide downloadable analysis reports.
-
-## 🎯 Project Objective
-
-The main objective of this project is to help job seekers understand how well their resumes match specific job descriptions and identify relevant skills they may need to highlight.
-
-## 👨‍💻 Author
+## Author
 
 **Ritthik RB**
 
 MCA Student | Aspiring AI/ML Engineer
-
----
-
-⭐ If you find this project useful, consider giving the repository a star!
